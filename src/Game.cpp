@@ -1,8 +1,13 @@
 module Game;
 
+#include <random>
+#include <iostream>
+
 Game::Game(int difficulty)
 {
     this->difficulty = difficulty;
+    rd = std::random_device();
+    gen = std::mt19937(rd());
     Game::InitializeBoard();
 }
 
@@ -30,13 +35,43 @@ void Game::InitializeBoard()
         break;
     }
 
-    for (int i = 0; i < rows; i++) {
+    std::uniform_int_distribution<> row_distrib(0, rows - 1);
+    std::uniform_int_distribution<> col_distrib(0, cols - 1);
+
+    for (int i = 0; i < rows; i++)
+    {
         std::vector<int> row(cols, 0);
         board.push_back(row);
+    }
+
+    int placed_mines = 0;
+    while (placed_mines < total_mines)
+    {
+        int mine_row = row_distrib(gen);
+        int mine_col = col_distrib(gen);
+
+        if (board[mine_row][mine_col] != -1)
+        {
+            board[mine_row][mine_col] = -1;
+            placed_mines++;
+        }
+    }
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
+            std::cout << board[i][j] << " ";
+        }
     }
 }
 
 void Game::Start()
 {
-
+    while (true)
+    {
+        char option;
+        std::cout << "Enter 'd' to display the board, 'q' to quit: ";
+        std::cin >> option;
+    }
 }
