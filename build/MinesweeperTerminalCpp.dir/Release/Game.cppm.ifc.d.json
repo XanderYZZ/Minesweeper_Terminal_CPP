@@ -1,0 +1,10 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\larns\\onedrive\\desktop\\programming_projects\\personal\\c_and_cpp\\minesweeper_terminal_cpp\\include\\game.cppm",
+        "ProvidedModule": "Game",
+        "Includes": [],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

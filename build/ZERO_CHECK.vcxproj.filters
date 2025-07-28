@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\build\CMakeFiles\06bac0d1f183686b8a36b97c72229fd7\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F2CE75EC-882D-3BCF-A345-F64CDF294A95}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

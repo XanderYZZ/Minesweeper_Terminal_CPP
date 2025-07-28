@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "MinesweeperTerminalCpp.dir\\Release\\main.obj",
+            "outputs": [
+                "MinesweeperTerminalCpp.dir\\Release\\"
+            ],
+            "requires": [
+                {
+                    "logical-name": "Game"
+                }
+            ]
+        }
+    ]
+}

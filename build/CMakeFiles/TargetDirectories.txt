@@ -1,0 +1,3 @@
+C:/Users/larns/OneDrive/Desktop/Programming_Projects/Personal/C_AND_CPP/Minesweeper_Terminal_CPP/build/CMakeFiles/MinesweeperTerminalCpp.dir
+C:/Users/larns/OneDrive/Desktop/Programming_Projects/Personal/C_AND_CPP/Minesweeper_Terminal_CPP/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/larns/OneDrive/Desktop/Programming_Projects/Personal/C_AND_CPP/Minesweeper_Terminal_CPP/build/CMakeFiles/ZERO_CHECK.dir

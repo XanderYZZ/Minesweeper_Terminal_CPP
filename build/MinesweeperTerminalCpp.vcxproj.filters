@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\include\Game.cppm">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\src\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F183BA2C-F099-38AE-9B06-738AA93B5CF5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

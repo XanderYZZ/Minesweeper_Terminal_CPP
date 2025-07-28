@@ -1,0 +1,10 @@
+^C:\USERS\LARNS\ONEDRIVE\DESKTOP\PROGRAMMING_PROJECTS\PERSONAL\C_AND_CPP\MINESWEEPER_TERMINAL_CPP\BUILD\CMAKEFILES\06BAC0D1F183686B8A36B97C72229FD7\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/larns/OneDrive/Desktop/Programming_Projects/Personal/C_AND_CPP/Minesweeper_Terminal_CPP -BC:/Users/larns/OneDrive/Desktop/Programming_Projects/Personal/C_AND_CPP/Minesweeper_Terminal_CPP/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/larns/OneDrive/Desktop/Programming_Projects/Personal/C_AND_CPP/Minesweeper_Terminal_CPP/build/MinesweeperTerminalCpp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

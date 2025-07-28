@@ -1,0 +1,21 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "MinesweeperTerminalCpp.dir\\Release\\/include/Game.cppm.obj",
+            "outputs": [
+                "MinesweeperTerminalCpp.dir\\Release\\",
+                "C:\\Users\\larns\\OneDrive\\Desktop\\Programming_Projects\\Personal\\C_AND_CPP\\Minesweeper_Terminal_CPP\\build\\MinesweeperTerminalCpp.dir\\Release\\Game.cppm.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "Game",
+                    "source-path": "c:\\users\\larns\\onedrive\\desktop\\programming_projects\\personal\\c_and_cpp\\minesweeper_terminal_cpp\\include\\game.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
