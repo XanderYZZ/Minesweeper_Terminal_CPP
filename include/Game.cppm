@@ -7,6 +7,10 @@ public:
     ~Game() = default;
     void Start();
 
+private: 
+    void InitializeBoard();
+    void DisplayBoard();
+
 private:
     std::vector<std::vector<int>> board;
     int difficulty = 0;
