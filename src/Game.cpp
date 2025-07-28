@@ -1,13 +1,10 @@
+#include <iostream>
+#include <random>
+#include <vector>
 module Game;
 
-#include <random>
-#include <iostream>
-
-Game::Game(int difficulty)
+Game::Game(int difficulty) : difficulty(difficulty), gen(rd())
 {
-    this->difficulty = difficulty;
-    rd = std::random_device();
-    gen = std::mt19937(rd());
     Game::InitializeBoard();
 }
 

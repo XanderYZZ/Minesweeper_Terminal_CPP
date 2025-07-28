@@ -174,9 +174,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\build\MinesweeperTerminalCpp.vcxproj">
-      <Project>{4DF20C1D-ACD0-3EA5-9214-83F75AB8133F}</Project>
-      <Name>MinesweeperTerminalCpp</Name>
+    <ProjectReference Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\build\Game.vcxproj">
+      <Project>{652481D4-B932-378E-90F4-6E3894404D37}</Project>
+      <Name>Game</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\build\Minesweeper.vcxproj">
+      <Project>{51A6C7CF-7B0B-39F6-BD55-93BF0458AF42}</Project>
+      <Name>Minesweeper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

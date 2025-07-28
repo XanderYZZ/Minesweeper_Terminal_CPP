@@ -1,31 +1,34 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.28)
 
-project(MinesweeperTerminalCpp VERSION 1.0 LANGUAGES CXX)
+project(Minesweeper LANGUAGES CXX)
 
-# Set C++23 standard and no compiler extensions
-set(CMAKE_CXX_STANDARD 23)
+# Require C++20 and enable module support
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_SCAN_FOR_MODULES ON)
+set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API YES)
 
-# List all sources explicitly
-set(SOURCES
+# Add the Game module library with interface and implementation
+add_library(Game
+    src/Game.cpp
+    include/Game.ixx
+)
+
+# Mark the module interface file explicitly
+target_sources(Game
+    PRIVATE
+        FILE_SET cxx_modules TYPE CXX_MODULES FILES
+        include/Game.ixx
+)
+
+# Add executable (example main)
+add_executable(Minesweeper
     src/main.cpp
-    include/Game.cppm
     src/Game.cpp
 )
 
-add_executable(MinesweeperTerminalCpp ${SOURCES})
+# Link the Game module to the executable
+target_link_libraries(Minesweeper PRIVATE Game)
 
-# Include directory for module interface headers
-target_include_directories(MinesweeperTerminalCpp PRIVATE include)
-
-# Mark the module interface file so CMake treats it correctly
-set_source_files_properties(include/Game.cppm PROPERTIES
-    CXX_MODULE_INTERFACE_HEADER_ONLY ON
-)
-
-# Enable warnings and optimizations for MSVC
-if(MSVC)
-    target_compile_options(MinesweeperTerminalCpp PRIVATE /W4 /O2)
-endif()
+# Include the module interface headers (for IntelliSense etc.)
+target_include_directories(Game PRIVATE include)
+target_include_directories(Minesweeper PRIVATE include)

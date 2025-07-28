@@ -5,7 +5,8 @@ int main()
 {
     bool running = true;
 
-    while (running) {   
+    while (running)
+    {
         int difficulty = 0;
 
         while (difficulty < 1 || difficulty > 3)
@@ -16,12 +17,12 @@ int main()
 
         Game game(difficulty);
         game.Start();
-        delete game;
 
         char choice;
         std::cout << "Do you want to play again? (y/n): ";
         std::cin >> choice;
-        if (choice != 'y' && choice != 'Y') {   
+        if (choice != 'y' && choice != 'Y')
+        {
             running = false;
         }
     }

@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Minesweeper.dir\\Release\\main.obj",
+            "outputs": [
+                "Minesweeper.dir\\Release\\"
+            ],
+            "requires": [
+                {
+                    "logical-name": "Game"
+                }
+            ]
+        }
+    ]
+}

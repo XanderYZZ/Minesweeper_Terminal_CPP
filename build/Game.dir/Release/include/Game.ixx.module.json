@@ -1,0 +1,21 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Game.dir\\Release\\/include/Game.ixx.obj",
+            "outputs": [
+                "Game.dir\\Release\\/include/Game.ixx.module.json",
+                "Game.dir\\Release\\/include/Game.ixx.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "Game",
+                    "source-path": "c:\\users\\larns\\onedrive\\desktop\\programming_projects\\personal\\c_and_cpp\\minesweeper_terminal_cpp\\include\\game.ixx",
+                    "is-interface": true
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
