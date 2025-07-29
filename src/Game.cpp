@@ -230,7 +230,7 @@ void Game::RevealAllMines()
 
 void Game::RevealAdjacentCells(int row, int col)
 {
-    // This is a BFS solution to reveal all adjacent cells that are not mines and have no adjacentm ines.
+    // This is a BFS solution to reveal all adjacent cells that are not mines and have no adjacent mines.
     std::queue<std::pair<int, int>> q;
     q.push({row, col});
 
