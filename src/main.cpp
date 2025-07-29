@@ -7,19 +7,11 @@ int main()
 
     while (running)
     {
-        int difficulty = 0;
-
-        while (difficulty < 1 || difficulty > 3)
-        {
-            std::cout << "Select the difficulty level for the game:\n1. Easy\n2. Medium\n3. Hard\nEnter your choice (1-3): ";
-            std::cin >> difficulty;
-        }
-
-        Game game(difficulty);
+        Game game;
         game.Start();
 
         char choice;
-        std::cout << "Do you want to play again? (y/n): ";
+        std::cout << "Do you want to play again? (y = yes, anything else = no): ";
         std::cin >> choice;
         if (choice != 'y' && choice != 'Y')
         {

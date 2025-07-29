@@ -7,11 +7,12 @@ export module Game;
 export class Game
 {
 public:
-    Game(int difficulty);
+    Game();
     ~Game() = default;
     void Start();
 
 private:
+    void PromptForDifficulty();
     void InitializeBoard();
     void PlaceMines();
     void PutAdjacentCounts();

@@ -8,9 +8,26 @@
 #include <string_view>
 module Game;
 
-Game::Game(int difficulty) : difficulty(difficulty), gen(rd())
+Game::Game() : gen(rd())
 {
+    this->PromptForDifficulty();
     this->InitializeBoard();
+}
+
+void PromptForDifficulty()
+{
+    int difficulty = 0;
+
+    while (difficulty < 1 || difficulty > 3)
+    {
+        std::cout << "Select the difficulty level for the game:\n1. Easy\n2. Medium\n3. Hard\nEnter your choice (1-3): ";
+        std::cin >> difficulty;
+
+        if (difficulty < 1 || difficulty > 3)
+        {
+            std::cout << std::string(RED) + "Invalid choice. Please select a valid difficulty level.\n\n";
+        }
+    }
 }
 
 void Game::InitializeBoard()
