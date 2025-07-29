@@ -20,7 +20,7 @@ void Game::PromptForDifficulty()
 
     while (difficulty < 1 || difficulty > 3)
     {
-        std::cout << "Select the difficulty level for the game:\n1. Easy\n2. Medium\n3. Hard\nEnter your choice (1-3): ";
+        std::cout << std::string(WHITE) + "Select the difficulty level for the game:\n1. Easy\n2. Medium\n3. Hard\nEnter your choice (1-3): ";
         std::cin >> difficulty;
 
         if (difficulty < 1 || difficulty > 3)
