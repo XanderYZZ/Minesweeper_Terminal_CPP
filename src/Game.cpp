@@ -161,7 +161,7 @@ void Game::Start()
             }
             else
             {
-                std::cout << std::string(WHITE) + "Cell already revealed. Please choose another cell.\n";
+                std::cout << std::string(RED) + "Cell already revealed. Please choose another cell.\n\n";
             }
         }
 
@@ -172,7 +172,7 @@ void Game::Start()
             this->RevealAllMines();
             this->DisplayBoard();
 
-            std::cout << std::string(WHITE) + "Game Over! You hit a mine.\n";
+            std::cout << std::string(RED) + "Game Over! You hit a mine.\n";
 
             break;
         }
@@ -187,7 +187,7 @@ void Game::Start()
 
             if (this->CheckWinCondition())
             {
-                std::cout << std::string(WHITE) + "Congratulations! You've cleared the board.\n";
+                std::cout << std::string(GREEN) + "Congratulations! You've cleared the board.\n";
 
                 break;
             }

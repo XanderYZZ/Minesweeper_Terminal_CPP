@@ -20,7 +20,7 @@ target_sources(Game
         include/Game.ixx
 )
 
-# Add executable (example main)
+# Add executable
 add_executable(Minesweeper
     src/main.cpp
     src/Game.cpp
@@ -29,6 +29,6 @@ add_executable(Minesweeper
 # Link the Game module to the executable
 target_link_libraries(Minesweeper PRIVATE Game)
 
-# Include the module interface headers (for IntelliSense etc.)
+# Include the module interface headers
 target_include_directories(Game PRIVATE include)
 target_include_directories(Minesweeper PRIVATE include)
