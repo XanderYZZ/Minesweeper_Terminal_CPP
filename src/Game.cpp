@@ -1,4 +1,5 @@
 #include <iostream>
+#include <print>
 #include <string>
 #include <random>
 #include <vector>
@@ -20,12 +21,12 @@ void Game::PromptForDifficulty()
 {
     while (difficulty < 1 || difficulty > 3)
     {
-        std::cout << std::string(WHITE) + "Select the difficulty level for the game:\n1. Easy\n2. Medium\n3. Hard\nEnter your choice (1-3): ";
+        std::print("{}Select the difficulty level for the game:\n1. Easy\n2. Medium\n3. Hard\nEnter your choice (1-3): ", WHITE);
         std::cin >> difficulty;
 
         if (difficulty < 1 || difficulty > 3)
         {
-            std::cout << std::string(RED) + "Invalid choice. Please select a valid difficulty level.\n\n";
+            std::print("{}Invalid choice. Please select a valid difficulty level.\n\n", RED);
         }
     }
 }
@@ -147,13 +148,13 @@ void Game::DisplayBoard()
                 }
             }
 
-            std::cout << display << " ";
+            std::print("{}{}", display, " ");
         }
 
-        std::cout << "\n";
+        std::println();
     }
 
-    std::cout << "\n";
+    std::println();
 }
 
 void Game::Start()
@@ -179,7 +180,7 @@ void Game::Start()
             }
             else
             {
-                std::cout << std::string(RED) + "Cell already revealed. Please choose another cell.\n\n";
+                std::print("{}Cell already revealed. Please choose another cell.\n\n", RED);
             }
         }
 
@@ -190,7 +191,7 @@ void Game::Start()
             this->RevealAllMines();
             this->DisplayBoard();
 
-            std::cout << std::string(RED) + "Game Over! You hit a mine.\n";
+            std::println("{}Game Over! You hit a mine.", RED);
 
             break;
         }
@@ -205,7 +206,7 @@ void Game::Start()
 
             if (this->CheckWinCondition())
             {
-                std::cout << std::string(GREEN) + "Congratulations! You've cleared the board.\n";
+                std::println("{}Congratulations! You've cleared the board.", GREEN);
 
                 break;
             }
@@ -292,23 +293,23 @@ std::pair<int, int> Game::GetRowAndCol()
     // The user is prompted for the column first because it makes the most logical sense to me.
     while (col < 1 || col > cols)
     {
-        std::cout << std::string(WHITE) + "Enter the column of the cell you want to reveal: ";
+        std::print("{}Enter the column of the cell you want to reveal: ", WHITE);
         std::cin >> col;
 
         if (col < 1 || col > cols)
         {
-            std::cout << std::string(RED) + "Column must be from 1 to " + std::to_string(cols) + ".\n\n";
+            std::print("{}Column must be from 1 to {}.\n\n", RED, cols);
         }
     }
 
     while (row < 1 || row > rows)
     {
-        std::cout << std::string(WHITE) + "Enter the row of the cell you want to reveal: ";
+        std::print("{}Enter the row of the cell you want to reveal: ", WHITE);
         std::cin >> row;
 
         if (row < 1 || row > rows)
         {
-            std::cout << std::string(RED) + "Row must be from 1 to " + std::to_string(rows) + ".\n\n";
+            std::print("{}Row must be from 1 to {}.\n\n", RED, rows);
         }
     }
 

@@ -1,3 +1,4 @@
+#include <print>
 #include <iostream>
 #include <string>
 #include <string_view>
@@ -14,7 +15,7 @@ int main()
         game.Start();
 
         char choice;
-        std::cout << std::string(WHITE) + "Do you want to play again? ('y' or 'Y' = yes, anything else = no): ";
+        std::print("{}Do you want to play again? ('y' or 'Y' = yes, anything else = no): ", WHITE);
         std::cin >> choice;
         if (choice != 'y' && choice != 'Y')
         {

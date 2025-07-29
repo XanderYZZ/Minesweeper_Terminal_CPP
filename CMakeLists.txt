@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.28)
 
 project(Minesweeper LANGUAGES CXX)
 
-# Require C++20 and enable module support
-set(CMAKE_CXX_STANDARD 20)
+# Require C++23 and enable module support
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API YES)
 
