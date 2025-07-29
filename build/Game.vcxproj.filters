@@ -7,6 +7,9 @@
     <ClCompile Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\include\Game.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\include\TextColors.ixx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\CMakeLists.txt" />

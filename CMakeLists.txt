@@ -11,6 +11,7 @@ set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API YES)
 add_library(Game
     src/Game.cpp
     include/Game.ixx
+    include/TextColors.ixx
 )
 
 # Mark the module interface file explicitly
@@ -18,6 +19,7 @@ target_sources(Game
     PRIVATE
         FILE_SET cxx_modules TYPE CXX_MODULES FILES
         include/Game.ixx
+        include/TextColors.ixx
 )
 
 # Add executable

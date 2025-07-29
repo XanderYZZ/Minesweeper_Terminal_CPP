@@ -288,6 +288,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ModuleOutputFile>$(IntDir)/include/Game.ixx.ifc</ModuleOutputFile>
       <ModuleDependenciesFile>$(IntDir)/include/Game.ixx.module.json</ModuleDependenciesFile>
     </ClCompile>
+    <ClCompile Include="C:\Users\larns\OneDrive\Desktop\Programming_Projects\Personal\C_AND_CPP\Minesweeper_Terminal_CPP\include\TextColors.ixx">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

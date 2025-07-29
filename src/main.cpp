@@ -1,5 +1,6 @@
 #include <iostream>
 import Game;
+import TextColors;
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
         game.Start();
 
         char choice;
-        std::cout << "Do you want to play again? (y = yes, anything else = no): ";
+        std::cout << std::string(WHITE) + "Do you want to play again? ('y' or 'Y' = yes, anything else = no): ";
         std::cin >> choice;
         if (choice != 'y' && choice != 'Y')
         {

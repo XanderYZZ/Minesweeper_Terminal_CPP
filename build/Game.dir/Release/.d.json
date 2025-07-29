@@ -146,6 +146,10 @@
         ],
         "ImportedModules": [
             {
+                "Name": "TextColors",
+                "BMI": "C:\\Users\\larns\\OneDrive\\Desktop\\Programming_Projects\\Personal\\C_AND_CPP\\Minesweeper_Terminal_CPP\\build\\Game.dir\\Release\\TextColors.ixx.ifc"
+            },
+            {
                 "Name": "Game",
                 "BMI": "C:\\Users\\larns\\OneDrive\\Desktop\\Programming_Projects\\Personal\\C_AND_CPP\\Minesweeper_Terminal_CPP\\build\\Game.dir\\Release\\include\\Game.ixx.ifc"
             }

@@ -6,6 +6,8 @@
 #include <unordered_map>
 #include <utility>
 #include <string_view>
+import TextColors;
+
 module Game;
 
 Game::Game() : gen(rd()), difficulty(-1) // Initialize the random number generator and set the difficulty to an invalid state

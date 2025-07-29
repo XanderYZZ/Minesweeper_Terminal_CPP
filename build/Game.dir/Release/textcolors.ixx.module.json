@@ -1,0 +1,21 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Game.dir\\Release\\TextColors.obj",
+            "outputs": [
+                "Game.dir\\Release\\",
+                "Game.dir\\Release\\TextColors.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "TextColors",
+                    "source-path": "c:\\users\\larns\\onedrive\\desktop\\programming_projects\\personal\\c_and_cpp\\minesweeper_terminal_cpp\\include\\textcolors.ixx",
+                    "is-interface": true
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
