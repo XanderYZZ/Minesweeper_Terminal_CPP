@@ -230,8 +230,7 @@ void Game::RevealAllMines()
 
 void Game::RevealAdjacentCells(int row, int col)
 {
-    // I wrote a BFS solution to reveal all adjacent cells that are not mines and have no adjacent mines.
-    // I prefer this over a DFS solution in this scenario since I generally hate recursion, unless the recursive solution is considerably more elegant or easier to write.
+    // This is a BFS solution to reveal all adjacent cells that are not mines and have no adjacentm ines.
     std::queue<std::pair<int, int>> q;
     q.push({row, col});
 
