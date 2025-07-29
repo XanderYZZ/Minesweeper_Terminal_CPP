@@ -1,4 +1,5 @@
 #include <random>
+#include <array>
 #include <vector>
 #include <utility>
 
@@ -19,10 +20,16 @@ private:
     void RevealAdjacentCells(int row, int col);
     std::pair<int, int> GetRowAndCol();
     void RevealAllMines();
-    bool CheckWinCondition();
     void DisplayBoard();
+    bool CheckWinCondition() const;
 
 private:
+    static constexpr std::array<std::array<int, 2>, 8> directions {{
+        {{-1, -1}}, {{-1, 0}}, {{-1, 1}},
+        {{0, -1}},  {{0, 1}},
+        {{1, -1}},  {{1, 0}},  {{1, 1}}
+    }};
+
     struct Cell
     {
         int row = 0, col = 0, adjacent_mines = 0;
@@ -31,16 +38,6 @@ private:
         Cell(int r, int c) : row(r), col(c), adjacent_mines(0), is_mine(false), is_revealed(false) {};
     };
 
-    std::vector<std::vector<int>> directions = {
-        {0, 1},
-        {1, 0},
-        {0, -1},
-        {-1, 0},
-        {1, 1},
-        {1, -1},
-        {-1, 1},
-        {-1, -1},
-    };
     std::vector<std::vector<Cell>> board;
     std::random_device rd;
     std::mt19937 gen;

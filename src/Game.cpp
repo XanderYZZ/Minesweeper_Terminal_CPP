@@ -2,6 +2,7 @@
 #include <string>
 #include <random>
 #include <vector>
+#include <array>
 #include <queue>
 #include <utility>
 #include <string_view>
@@ -268,7 +269,7 @@ void Game::RevealAdjacentCells(int row, int col)
     }
 }
 
-bool Game::CheckWinCondition()
+bool Game::CheckWinCondition() const
 {
     for (int i = 0; i < rows; i++)
     {
