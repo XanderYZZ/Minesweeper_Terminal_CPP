@@ -11,7 +11,7 @@ import TextColors;
 
 module Game;
 
-Game::Game() : gen(rd()), difficulty(-1) // Initialize the random number generator and set the difficulty to an invalid state
+Game::Game() : gen(rd()), difficulty(-1) // Initialize the random number generator and set the difficulty to an invalid state.
 {
     this->PromptForDifficulty();
     this->InitializeBoard();
