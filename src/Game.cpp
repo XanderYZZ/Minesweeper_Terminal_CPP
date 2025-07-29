@@ -14,7 +14,7 @@ Game::Game() : gen(rd())
     this->InitializeBoard();
 }
 
-void PromptForDifficulty()
+void Game::PromptForDifficulty()
 {
     int difficulty = 0;
 
