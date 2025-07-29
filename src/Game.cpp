@@ -163,6 +163,7 @@ void Game::Start()
     {
         int row = 0, col = 0;
 
+        // The user is prompted for the row and column of the cell they want to reveal until it is a valid cell that has not been revealed yet and is within the ranges of the board.
         while (true)
         {
             std::pair<int, int> pair_result = this->GetRowAndCol();
@@ -229,6 +230,8 @@ void Game::RevealAllMines()
 
 void Game::RevealAdjacentCells(int row, int col)
 {
+    // I wrote a BFS solution to reveal all adjacent cells that are not mines and have no adjacent mines.
+    // I prefer this over a DFS solution in this scenario since I generally hate recursion, unless the recursive solution is considerably more elegant or easier to write.
     std::queue<std::pair<int, int>> q;
     q.push({row, col});
 
@@ -286,16 +289,7 @@ std::pair<int, int> Game::GetRowAndCol()
 {
     int row = -1, col = 0;
 
-    while (row < 1 || row > rows)
-    {
-        std::cout << std::string(WHITE) + "Enter the row of the cell you want to reveal: ";
-        std::cin >> row;
-
-        if (row < 1 || row > rows)
-        {
-            std::cout << std::string(RED) + "Row must be from 1 to " + std::to_string(rows) + ".\n\n";
-        }
-    }
+    // The user is prompted for the column first because it makes the most logical sense to me.
     while (col < 1 || col > cols)
     {
         std::cout << std::string(WHITE) + "Enter the column of the cell you want to reveal: ";
@@ -307,9 +301,21 @@ std::pair<int, int> Game::GetRowAndCol()
         }
     }
 
-    // The user is expected to input 1-based indices, so we adjust them to 0-based indices for internal processing.
-    row -= 1; // Adjust for 0-based index
-    col -= 1; // Adjust for 0-based index
+    while (row < 1 || row > rows)
+    {
+        std::cout << std::string(WHITE) + "Enter the row of the cell you want to reveal: ";
+        std::cin >> row;
 
+        if (row < 1 || row > rows)
+        {
+            std::cout << std::string(RED) + "Row must be from 1 to " + std::to_string(rows) + ".\n\n";
+        }
+    }
+
+    // The user is expected to input 1-based indices, so we adjust them to 0-based indices for internal processing.
+    row -= 1; // Adjust for 0-based index.
+    col -= 1; // Adjust for 0-based index.
+
+    // The row is returned first because the board vector is structured as board[row][col]. Hence, it is an inversion of the order of the user input.
     return {row, col};
 }
