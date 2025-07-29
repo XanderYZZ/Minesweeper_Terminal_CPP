@@ -8,7 +8,7 @@
 #include <string_view>
 module Game;
 
-Game::Game() : gen(rd())
+Game::Game() : gen(rd()), difficulty(-1) // Initialize the random number generator and set the difficulty to an invalid state
 {
     this->PromptForDifficulty();
     this->InitializeBoard();
@@ -16,8 +16,6 @@ Game::Game() : gen(rd())
 
 void Game::PromptForDifficulty()
 {
-    int difficulty = 0;
-
     while (difficulty < 1 || difficulty > 3)
     {
         std::cout << std::string(WHITE) + "Select the difficulty level for the game:\n1. Easy\n2. Medium\n3. Hard\nEnter your choice (1-3): ";
