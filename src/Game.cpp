@@ -247,7 +247,7 @@ void Game::RevealAdjacentCells(int start_row, int start_col)
             int nr = r + dir[0];
             int nc = c + dir[1];
 
-            if (nr < 0 || nr >= 9 || nc < 0 || nc >= 9) { continue; }
+            if (nr < 0 || nr >= rows || nc < 0 || nc >= cols) { continue; }
 
             auto &neighbor = board[nr][nc];
 
