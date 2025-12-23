@@ -1,0 +1,21 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Minesweeper.dir\\Debug\\Game.obj",
+            "outputs": [
+                "C:\\Users\\larns\\OneDrive\\Desktop\\Programming_Projects\\Personal\\C_AND_CPP\\Minesweeper_Terminal_CPP\\build\\Minesweeper.dir\\Debug\\vc143.pdb",
+                "Minesweeper.dir\\Debug\\"
+            ],
+            "requires": [
+                {
+                    "logical-name": "Game"
+                },
+                {
+                    "logical-name": "TextColors"
+                }
+            ]
+        }
+    ]
+}

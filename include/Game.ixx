@@ -17,7 +17,7 @@ private:
     void InitializeBoard();
     void PlaceMines();
     void PutAdjacentCounts();
-    void RevealAdjacentCells(int row, int col);
+    void RevealAdjacentCells(int, int);
     std::pair<int, int> GetRowAndCol();
     void RevealAllMines();
     void DisplayBoard();

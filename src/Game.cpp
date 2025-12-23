@@ -230,42 +230,35 @@ void Game::RevealAllMines()
     }
 }
 
-void Game::RevealAdjacentCells(int row, int col)
+void Game::RevealAdjacentCells(int start_row, int start_col)
 {
-    // This is a BFS solution to reveal all adjacent cells that are not mines and have no adjacent mines.
     std::queue<std::pair<int, int>> q;
-    q.push({row, col});
+    auto &cell = board[start_row][start_col];
+    cell.is_revealed = true;
+    q.push({start_row, start_col});
 
     while (!q.empty())
     {
-        auto [current_row, current_col] = q.front();
+        auto [r, c] = q.front();
         q.pop();
 
-        struct Cell &cell = board[current_row][current_col];
-        cell.is_revealed = true;
-
-        for (const auto &direction : directions)
+        for (const auto& dir : directions)
         {
-            int new_row = current_row + direction[0];
-            int new_col = current_col + direction[1];
+            int nr = r + dir[0];
+            int nc = c + dir[1];
 
-            if (new_row < 0 || new_col < 0 || new_row >= rows || new_col >= cols)
+            if (nr < 0 || nr >= 9 || nc < 0 || nc >= 9) { continue; }
+
+            auto &neighbor = board[nr][nc];
+
+            if (neighbor.is_revealed || neighbor.is_mine) { continue; }
+
+            neighbor.is_revealed = true;
+
+            if (neighbor.adjacent_mines == 0)
             {
-                continue;
+                q.push({nr, nc});
             }
-
-            struct Cell &new_cell = board[new_row][new_col];
-
-            if (new_cell.is_revealed || new_cell.is_mine)
-            {
-                continue;
-            }
-            if (new_cell.adjacent_mines != 0)
-            {
-                continue;
-            }
-
-            q.push({new_row, new_col});
         }
     }
 }
